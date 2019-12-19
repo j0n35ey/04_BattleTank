@@ -24,8 +24,8 @@ public:
 		float CrossHairXLocation{ 0.5f };
 	UPROPERTY(EditAnywhere, Category = "Screen")
 		float CrossHairYLocation{ 0.3333f };
-
-	
+	UPROPERTY(EditAnywhere, Category = "Screen")
+		float LineTraceRange = 100000.0f;
 private:
 	ATank* GetControlledTank() const;
 
@@ -34,4 +34,6 @@ private:
 	bool GetSightRayHitLocation(FVector& OUT_HitLocation) const;
 
 	bool GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection) const;
+
+	bool GetLookVectorHitLocation(FVector LookDirection, FVector& HitLocation) const;
 };
