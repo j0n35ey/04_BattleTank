@@ -19,6 +19,13 @@ public:
 	virtual void BeginPlay() override;
 	
 	virtual void Tick(float DeltaTime) override;
+
+	UPROPERTY(EditAnywhere, Category = "Screen")
+		float CrossHairXLocation{ 0.5f };
+	UPROPERTY(EditAnywhere, Category = "Screen")
+		float CrossHairYLocation{ 0.3333f };
+
+	
 private:
 	ATank* GetControlledTank() const;
 
