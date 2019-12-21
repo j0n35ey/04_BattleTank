@@ -4,6 +4,7 @@
 #include "Tank.h"
 #include "Kismet/GameplayStatics.h"
 #include "TankBarrel.h"
+#include "TankAimingComponent.h"
 // Sets default values
 ATank::ATank()
 {

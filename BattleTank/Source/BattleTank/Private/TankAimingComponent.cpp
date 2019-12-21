@@ -4,6 +4,7 @@
 #include "TankAimingComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "TankBarrel.h"
+#include "Components/StaticMeshComponent.h"
 
 UTankAimingComponent::UTankAimingComponent()
 {

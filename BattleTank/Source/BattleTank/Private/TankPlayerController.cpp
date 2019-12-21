@@ -4,6 +4,8 @@
 #include "TankPlayerController.h"
 #include "Engine/World.h"
 #include "Camera/PlayerCameraManager.h"
+#include "Tank.h"
+
 void ATankPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
