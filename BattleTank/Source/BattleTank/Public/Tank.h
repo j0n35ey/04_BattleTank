@@ -6,8 +6,10 @@
 #include "GameFramework/Pawn.h"
 #include "Tank.generated.h"
 
+class UTankTurret;
 class UTankBarrel;
 class UTankAimingComponent;
+
 UCLASS()
 class BATTLETANK_API ATank : public APawn
 {
@@ -27,9 +29,11 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	void AimAt(FVector HitLocation);
-	UFUNCTION(BlueprintCallable)
-	void SetBarrelReference(UTankBarrel* BarrelToSet);
 
+	UFUNCTION(BlueprintCallable)
+		void SetBarrelReference(UTankBarrel* BarrelToSet);
+	UFUNCTION(BlueprintCallable)
+		void SetTurretReference(UTankTurret* TurretToSet);
 	UPROPERTY(EditAnywhere, Category = "Firing")
 		float LaunchSpeed = 100000; // 1000 metres per second
 };
